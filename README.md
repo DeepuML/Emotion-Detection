@@ -1,8 +1,8 @@
 Emotion Detection
 ==============================
 
-A small project for the Emotion Detection and using MLOPS technique
-
+A small project for the Emotion Detection and using MLOPS technique .
+    
 Project Organization
 ------------
 
