@@ -1,0 +1,40 @@
+stages:
+  # Stage for data ingestion
+  data_ingestion:
+    cmd: python src/data/data_ingestion.py
+    deps:
+      - src/data/data_ingestion.py
+    params:
+      - data_ingestion.test_size
+    outs:
+      - data/interim
+
+  # Stage for feature engineering
+  feature_engineering:
+    cmd: python src/features/feature_engineering.py
+    deps:
+      - data/interim
+      - params.yaml
+      - src/features/feature_engineering.py
+    outs:
+      - data/processed/test_tfidf.csv
+      - data/processed/train_tfidf.csv
+
+  # Stage for model training
+  model_building:
+    cmd: python src/models/model_building.py
+    deps:
+      - data/processed
+      - src/models/model_building.py
+    outs:
+      - models/model.pkl
+
+  # Stage for model evaluation
+  model_evaluation:
+    cmd: python src/models/model_evaluation.py
+    deps:
+      - data/processed/test_tfidf.csv
+      - models/model.pkl
+      - src/models/model_evaluation.py
+    outs:
+      - reports/metrics.json
