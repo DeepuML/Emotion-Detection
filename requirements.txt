@@ -1,6 +1,13 @@
 # local package
 -e .
 
+numpy 
+pandas
+sklearn
+nltk
+pickle
+
+
 # external requirements
 click
 Sphinx
