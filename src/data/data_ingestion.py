@@ -198,6 +198,7 @@ def main():
         # Log and print error if ingestion process fails
         logger.error('Failed to complete the data ingestion process: %s', e)
         print(f"Error: {e}")
+        
 
 
 # Script Entry Point
