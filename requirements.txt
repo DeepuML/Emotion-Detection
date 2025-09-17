@@ -1,8 +1,19 @@
-# local package
--e .
+click==8.2.1
+colorama==0.4.6
+dvc==3.51.2
 
-numpy 
-pandas
-scikit-learn
-nltk
+joblib==1.5.2
+nltk==3.9.1
+numpy==2.3.3
+pandas==2.3.2
+python-dateutil==2.9.0.post0
+pytz==2025.2
+regex==2025.9.1
+scikit-learn==1.7.2
+scipy==1.16.2
+six==1.17.0
+-e git+https://github.com/DeepuML/Emotion-Detection.git@6ff2db9cf68b01531e72b26ed8c2890aaec38be9#egg=src
+threadpoolctl==3.6.0
+tqdm==4.67.1
+tzdata==2025.2
 
